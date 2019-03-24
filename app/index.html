@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type='text/javascript' src='./js/app.js'></script>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" media="screen" />
+</head>
+<body>
+
+<div class='ojd-wrapper'>
+	<header class='ojd-main'>
+		<img src='images/logo.png' alt='Open Joystick Display Server'/>
+	</header>
+	<header class='ojd-warning'>
+		Do Not Minimize This Window.
+	</header>
+	<section>
+		<header>Configuration</header>
+
+	</section>
+	<section id='ojd-server-status' class='ojd-status-bad'>
+		<header>Server Status</header>
+		<div class='ojd-indicator'></div>
+		<div class='ojd-indicator-text'></div>
+	</section>
+	<section id='ojd-server-address' style='display:none'>
+		<header>Server Address</header>
+		<ul></ul>
+	</section>
+	<section id='ojd-controller-status' class='ojd-status-bad'>
+		<header>Controller Status</header>
+		<div class='ojd-indicator'></div>
+		<div class='ojd-indicator-text'>Controller not connected. Hit a button on your controller to assign it to the server.</div>
+	</section>
+</div>
+
+</body>
+</html>

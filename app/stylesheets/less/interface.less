@@ -1,0 +1,74 @@
+body{
+	background:@color-background;
+	color:@color-font;
+	border:0px;
+	padding:0px;
+	margin:0px;
+	font-family:Arial,Helvetica,Sans-Serif,Monospace;
+	font-size:12px;
+	user-select: none;
+	overflow:hidden;
+}
+strong {
+	font-weight:bold;
+}
+header.ojd-main {
+	background:@color-darkest;
+	img {
+		width:100%;
+		padding:10px;
+	}
+	line-height:0;
+}
+header.ojd-warning {
+	background:@color-background;
+	color:@color-accent;
+	padding:5px;
+	text-align:center;
+	font-weight:bold;
+}
+section {
+	background: @color-dark;
+	border-bottom: 1px solid @color-darkest;
+	> header {
+		font-weight:bold;
+		padding:5px;
+		background:@color-darker;
+		text-align:center;
+	}
+	.ojd-indicator {
+		height:30px;
+		width:30px;
+		border-radius:100%;
+		background:@color-lighter;
+		margin:10px auto;
+	}
+	&.ojd-status-bad {
+		.ojd-indicator {
+			background:red;
+		}
+	}
+	&.ojd-status-good {
+		.ojd-indicator {
+			background:green;
+		}
+	}
+	.ojd-indicator-text {
+		text-align:center;
+		font-size:12px;
+		padding:10px;
+	}
+	ul {
+		li {
+			text-align:center;
+			padding:5px;
+		}
+	}
+
+}
+
+div.orb {
+
+
+}
+
