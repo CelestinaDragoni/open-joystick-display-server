@@ -4,15 +4,9 @@ const JSONSocket = require('json-socket');
 class Server {
 
 	constructor(port, callback) {
-
 		this.server = null;
-		this.port = parseInt(port, 10);
 		this.callback = callback;
-
-		if (this.port <= 0 || this.port >= 65534 || isNaN(this.port)) {
-			this.port = 9001;
-		}
-
+		this.port = port;
 	}
 
 	proc() {
@@ -54,7 +48,10 @@ class Server {
 				socket.sendMessage(resp);
 			}).bind(this));
 		}).bind(this));
-		this.server.listen(this.port);
+		this.server.listen(this.port, (function() {
+			this.callback(true);
+		}).bind(this));
+		
 	}
 
 }

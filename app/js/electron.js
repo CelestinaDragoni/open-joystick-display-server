@@ -29,7 +29,7 @@ function createWindow () {
         minimizable:false,
         fullscreen:false,
         resizable:false,
-        title: "Open Joystick Display Server",
+        title: "Open Joystick Display Server (BETA)",
         webPreferences:{nodeIntegration:true}
     };
 

@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Start Server
 	const {Server} = require(window.OJD.appendCwdPath("app/js/server.js"));
-	testServer = new Server(9001, updateServerStatus);
+	testServer = new Server(56709, updateServerStatus);
 	testServer.start();
 
 	// Joystick Events
