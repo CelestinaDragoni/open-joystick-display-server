@@ -49,7 +49,7 @@ class Server {
 			}).bind(this));
 		}).bind(this));
 		this.server.listen(this.port, (function() {
-			this.callback(true);
+			this.callback(true, {'port':this.port});
 		}).bind(this));
 		
 	}
