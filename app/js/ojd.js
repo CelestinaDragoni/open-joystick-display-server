@@ -14,7 +14,7 @@ class OJD {
 	 * OJD Class constructor. Sets the CWD application wide.
 	 */
 	constructor(cwd) {
-		this.cwd = this.getEnvPath(cwd.replace('app', ''));
+		this.cwd = this.getEnvPath(cwd.replace(/app$/, ''));
 	}
 
 	/*
