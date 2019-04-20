@@ -34,7 +34,9 @@
   "dependencies": {
     "clone": "^2.1.2",
     "electron-store": "^2.0.0",
-    "original-fs": "^1.0.0"
+    "json-socket": "^0.3.0",
+    "original-fs": "^1.0.0",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "clone": "^2.1.2",

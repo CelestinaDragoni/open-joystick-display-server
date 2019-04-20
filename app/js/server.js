@@ -1,4 +1,5 @@
-const HTTP = require('http');
+const net = require('net');
+const JSONSocket = require('json-socket');
 
 class Server {
 
@@ -14,7 +15,7 @@ class Server {
 
 	}
 
-	proc(req, res) {
+	proc() {
 		let joysticks = navigator.getGamepads();
 		let message = {connected:false};
 		if (joysticks[0] && joysticks[0].connected) {
@@ -37,21 +38,25 @@ class Server {
 			}
 
 		}
-		res.write(JSON.stringify(message));
-		res.end();
+		return message;
 	}
 
 	start() {
-		this.server = HTTP.createServer(this.proc.bind(this))
+		this.server = net.createServer();
 		this.server.on('error', (function() {
 			alert(`Could not open server on port ${this.port}.\nTry changing the port number or check to see if you have any other servers running or if you have permission to use this port then restart the server.`);
 			this.callback(false);
 		}).bind(this));
-		this.server.listen(this.port, '0.0.0.0', (function() {
-			this.callback(true, this.server.address());
+		this.server.on('connection', (function(socket) { 
+			socket = new JSONSocket(socket); 
+			socket.on('message', (function(message) {
+				const resp = this.proc();
+				socket.sendMessage(resp);
+			}).bind(this));
 		}).bind(this));
+		this.server.listen(this.port);
 	}
-
 
 }
 module.exports.Server = Server;
+
