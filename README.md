@@ -29,7 +29,7 @@ are met:
 
 4. Redistributions of any form whatsoever must retain the following
    acknowledgment: 'Software originally developed by
-   "Open Joystick Display Project and 'Anthony Mattera' 
+   "Open Joystick Display Project and 'Anthony Mattera' (KernelZechs) 
    (http://www.ojdproject.com/)."
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
