@@ -28,7 +28,7 @@ are met:
    from this software without specific prior written permission.
 
 4. Redistributions of any form whatsoever must retain the following
-   acknowledgment: 'This product includes original software developed by
+   acknowledgment: 'Software originally developed by
    "Open Joystick Display Project and 'Anthony Mattera' 
    (http://www.ojdproject.com/)."
 
