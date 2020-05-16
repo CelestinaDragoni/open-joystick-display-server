@@ -1,4 +1,4 @@
-# This project has been discontinued and is no longer supported.
+### This project has been discontinued and is no longer supported.
 
 # Open Joystick Display Server
 *Joystick server that interfaces with Open Joystick Display*
